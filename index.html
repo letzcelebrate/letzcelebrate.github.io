@@ -1,11 +1,98 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>LetzCelebrate</title>
-  </head>
-  <body>
-    <h1>LetzCelebrate 🎉</h1>
-    <p>Your GitHub Pages site is working.</p>
-  </body>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LetzCelebrate – Search</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- HEADER -->
+  <header class="bg-white border-b">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <div class="font-bold text-xl">LetzCelebrate</div>
+
+      <nav class="flex gap-6 text-sm">
+        <a href="#" class="hover:text-blue-600">Lieux</a>
+        <a href="#" class="hover:text-blue-600">Idées Cadeaux</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <span class="text-sm">FR</span>
+        <div class="w-8 h-8 rounded-full bg-gray-200"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH BAR -->
+  <section class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center gap-4 text-sm">
+      <div class="flex-1 border rounded px-3 py-2">Localisation</div>
+      <div class="flex-1 border rounded px-3 py-2">Activité</div>
+      <div class="flex-1 border rounded px-3 py-2">Date</div>
+      <div class="flex-1 border rounded px-3 py-2">Âge</div>
+      <div class="flex-1 border rounded px-3 py-2">Invités</div>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded">🔍</button>
+    </div>
+  </section>
+
+  <!-- MAIN LAYOUT -->
+  <main class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-12 gap-6">
+
+    <!-- FILTERS -->
+    <aside class="col-span-3 bg-white rounded p-4 text-sm">
+      <h3 class="font-semibold mb-3">Activité</h3>
+      <ul class="space-y-2">
+        <li><input type="checkbox"> Parc de jeux</li>
+        <li><input type="checkbox"> Activité sportive</li>
+        <li><input type="checkbox"> Activité culturelle</li>
+        <li><input type="checkbox"> Nature & animaux</li>
+      </ul>
+
+      <hr class="my-4">
+
+      <h3 class="font-semibold mb-3">Fourchette de prix</h3>
+      <ul class="space-y-2">
+        <li><input type="checkbox"> &lt; X €</li>
+        <li><input type="checkbox"> X – Y €</li>
+      </ul>
+    </aside>
+
+    <!-- RESULTS -->
+    <section class="col-span-6 space-y-4">
+      <div class="bg-white rounded p-4 flex gap-4">
+        <div class="w-24 h-24 bg-gray-200 rounded"></div>
+        <div>
+          <h4 class="font-semibold">ClimbingX</h4>
+          <p class="text-xs text-gray-500">Adresse, voir sur la carte</p>
+          <p class="text-sm mt-2">2 words description</p>
+          <p class="text-sm mt-2 font-semibold">Price: x€</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded p-4 flex gap-4">
+        <div class="w-24 h-24 bg-gray-200 rounded"></div>
+        <div>
+          <h4 class="font-semibold">Painting X</h4>
+          <p class="text-xs text-gray-500">Adresse, voir sur la carte</p>
+          <p class="text-sm mt-2">2 words description</p>
+          <p class="text-sm mt-2 font-semibold">Price: x€</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <aside class="col-span-3 bg-white rounded p-4">
+      <div class="w-full h-96 bg-gray-200 rounded flex items-center justify-center text-sm text-gray-500">
+        Map placeholder
+      </div>
+    </aside>
+
+  </main>
+
+</body>
 </html>
