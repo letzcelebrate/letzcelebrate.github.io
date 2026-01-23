@@ -66,13 +66,13 @@
     <section class="col-span-6 space-y-4">
 
       <!-- RESULT CARD -->
-      <div class="bg-white rounded-xl hover:shadow-md transition flex gap-4 p-4 cursor-pointer">
+      <div class="bg-white rounded-xl hover:shadow-md transition flex gap-6 p-4 cursor-pointer">
 
         <!-- Image -->
         <div class="w-32 h-32 bg-gray-200 rounded-lg flex-shrink-0"></div>
 
-        <!-- Content -->
-        <div class="flex flex-col justify-between w-full">
+        <!-- Main content -->
+        <div class="flex flex-col justify-between flex-1">
 
           <div>
             <h4 class="text-lg font-semibold text-gray-900">
@@ -86,19 +86,6 @@
             <p class="text-sm text-gray-700 mt-3">
               2 words description
             </p>
-
-            <!-- Availability badges -->
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span class="px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-700">
-                Mer · 14:00–17:00
-              </span>
-              <span class="px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-700">
-                Sam · 10:00–13:00
-              </span>
-              <span class="px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-700">
-                Dim · 14:00–17:00
-              </span>
-            </div>
           </div>
 
           <div class="mt-4 flex justify-between items-end">
@@ -111,37 +98,30 @@
           </div>
 
         </div>
-      </div>
 
-      <!-- RESULT CARD -->
-      <div class="bg-white rounded-xl hover:shadow-md transition flex gap-4 p-4 cursor-pointer">
+        <!-- Availability calendar (RIGHT) -->
+        <div class="flex flex-col items-end text-xs text-gray-700 gap-2 min-w-[150px]">
 
-        <div class="w-32 h-32 bg-gray-200 rounded-lg flex-shrink-0"></div>
-
-        <div class="flex flex-col justify-between w-full">
-          <div>
-            <h4 class="text-lg font-semibold text-gray-900">
-              Painting X
-            </h4>
-
-            <p class="text-sm text-gray-500 mt-1">
-              Adresse · <span class="underline">voir sur la carte</span>
-            </p>
-
-            <p class="text-sm text-gray-700 mt-3">
-              2 words description
-            </p>
+          <!-- Days -->
+          <div class="flex gap-1 text-gray-500">
+            <span class="w-8 text-center">Mer</span>
+            <span class="w-8 text-center">Jeu</span>
+            <span class="w-8 text-center">Ven</span>
+            <span class="w-8 text-center">Sam</span>
+            <span class="w-8 text-center">Dim</span>
           </div>
 
-          <div class="mt-4 flex justify-between items-end">
-            <span class="text-sm text-gray-500">
-              À partir de
-            </span>
-            <span class="text-lg font-semibold text-gray-900">
-              x €
-            </span>
+          <!-- Prices -->
+          <div class="flex gap-1">
+            <span class="w-8 py-1 rounded bg-gray-100 text-center">100€</span>
+            <span class="w-8 py-1 rounded bg-gray-100 text-center">100€</span>
+            <span class="w-8 py-1 rounded bg-gray-100 text-center">100€</span>
+            <span class="w-8 py-1 rounded bg-gray-200 text-center font-medium">150€</span>
+            <span class="w-8 py-1 rounded bg-gray-200 text-center font-medium">150€</span>
           </div>
+
         </div>
+
       </div>
 
     </section>
