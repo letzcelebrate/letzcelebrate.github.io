@@ -47,67 +47,91 @@
     <aside class="col-span-3 bg-white rounded p-4 text-sm">
       <h3 class="font-semibold mb-3">Activité</h3>
       <ul class="space-y-2">
-        <li><input type="checkbox"> Parc de jeux</li>
-        <li><input type="checkbox"> Activité sportive</li>
-        <li><input type="checkbox"> Activité culturelle</li>
-        <li><input type="checkbox"> Nature & animaux</li>
+        <li><label><input type="checkbox" class="mr-2">Parc de jeux</label></li>
+        <li><label><input type="checkbox" class="mr-2">Activité sportive</label></li>
+        <li><label><input type="checkbox" class="mr-2">Activité culturelle</label></li>
+        <li><label><input type="checkbox" class="mr-2">Nature & animaux</label></li>
       </ul>
 
       <hr class="my-4">
 
       <h3 class="font-semibold mb-3">Fourchette de prix</h3>
       <ul class="space-y-2">
-        <li><input type="checkbox"> &lt; X €</li>
-        <li><input type="checkbox"> X – Y €</li>
+        <li><label><input type="checkbox" class="mr-2">&lt; X €</label></li>
+        <li><label><input type="checkbox" class="mr-2">X – Y €</label></li>
       </ul>
     </aside>
 
     <!-- RESULTS -->
     <section class="col-span-6 space-y-4">
-      <div class="bg-white rounded p-4 flex gap-4">
-        <div class="w-24 h-24 bg-gray-200 rounded"></div>
-        <div>
-          <h4 class="font-semibold">ClimbingX</h4>
-          <p class="text-xs text-gray-500">Adresse, voir sur la carte</p>
-          <p class="text-sm mt-2">2 words description</p>
-          <p class="text-sm mt-2 font-semibold">Price: x€</p>
+
+      <!-- RESULT CARD -->
+      <div class="bg-white rounded-xl hover:shadow-md transition flex gap-4 p-4">
+
+        <!-- Image -->
+        <div class="w-32 h-32 bg-gray-200 rounded-lg flex-shrink-0"></div>
+
+        <!-- Content -->
+        <div class="flex flex-col justify-between w-full">
+
+          <div>
+            <h4 class="text-lg font-semibold text-gray-900">
+              ClimbingX
+            </h4>
+
+            <p class="text-sm text-gray-500 mt-1">
+              Adresse · <span class="underline cursor-pointer">voir sur la carte</span>
+            </p>
+
+            <p class="text-sm text-gray-700 mt-3">
+              2 words description
+            </p>
+          </div>
+
+          <div class="mt-4 flex justify-between items-end">
+            <span class="text-sm text-gray-500">
+              À partir de
+            </span>
+            <span class="text-lg font-semibold text-gray-900">
+              x €
+            </span>
+          </div>
+
         </div>
       </div>
 
-     <div class="bg-white rounded-xl overflow-hidden hover:shadow-md transition flex gap-4 p-4">
-  
-  <!-- Image -->
-  <div class="w-32 h-32 bg-gray-200 rounded-lg flex-shrink-0"></div>
+      <!-- RESULT CARD -->
+      <div class="bg-white rounded-xl hover:shadow-md transition flex gap-4 p-4">
 
-  <!-- Content -->
-  <div class="flex flex-col justify-between">
-    
-    <div>
-      <h4 class="text-lg font-semibold text-gray-900">
-        ClimbingX
-      </h4>
+        <div class="w-32 h-32 bg-gray-200 rounded-lg flex-shrink-0"></div>
 
-      <p class="text-sm text-gray-500 mt-1">
-        Adresse · <span class="underline cursor-pointer">voir sur la carte</span>
-      </p>
+        <div class="flex flex-col justify-between w-full">
+          <div>
+            <h4 class="text-lg font-semibold text-gray-900">
+              Painting X
+            </h4>
 
-      <p class="text-sm text-gray-700 mt-3">
-        2 words description
-      </p>
-    </div>
+            <p class="text-sm text-gray-500 mt-1">
+              Adresse · <span class="underline cursor-pointer">voir sur la carte</span>
+            </p>
 
-    <div class="mt-4 flex justify-between items-end">
-      <span class="text-sm text-gray-500">
-        À partir de
-      </span>
-      <span class="text-lg font-semibold text-gray-900">
-        x €
-      </span>
-    </div>
+            <p class="text-sm text-gray-700 mt-3">
+              2 words description
+            </p>
+          </div>
 
-  </div>
-</div>
+          <div class="mt-4 flex justify-between items-end">
+            <span class="text-sm text-gray-500">
+              À partir de
+            </span>
+            <span class="text-lg font-semibold text-gray-900">
+              x €
+            </span>
+          </div>
+        </div>
+      </div>
 
+    </section>
 
     <!-- MAP -->
     <aside class="col-span-3 bg-white rounded p-4">
