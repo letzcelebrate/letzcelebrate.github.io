@@ -48,7 +48,25 @@
   <!-- SEARCH BAR -->
   <section class="bg-white border-b">
     <div class="max-w-7xl mx-auto px-4 py-4 flex gap-3 text-sm">
-      <div class="flex-1 border rounded px-3 py-2">Localisation</div>
+
+      <!-- LOCATION SEARCH -->
+<div class="flex-1 flex items-center gap-2 border rounded px-3 py-2 bg-white">
+  <input
+    id="locationInput"
+    type="text"
+    placeholder="Ville, région…"
+    class="flex-1 outline-none text-sm"
+  />
+  <button
+    type="button"
+    onclick="useMyLocation()"
+    class="text-blue-600 text-xs font-semibold hover:underline"
+  >
+    📍 Près de moi
+  </button>
+</div>
+
+      
       <div class="flex-1 border rounded px-3 py-2">Activité</div>
       <div class="flex-1 border rounded px-3 py-2">Date</div>
       <div class="flex-1 border rounded px-3 py-2">Âge</div>
