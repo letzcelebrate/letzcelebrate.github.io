@@ -30,7 +30,7 @@
 
   <!-- SEARCH BAR -->
   <section class="bg-white border-b">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center gap-4 text-sm">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex gap-3 text-sm">
       <div class="flex-1 border rounded px-3 py-2">Localisation</div>
       <div class="flex-1 border rounded px-3 py-2">Activité</div>
       <div class="flex-1 border rounded px-3 py-2">Date</div>
@@ -40,83 +40,87 @@
     </div>
   </section>
 
-  <!-- MAIN LAYOUT -->
+  <!-- MAIN -->
   <main class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-12 gap-6">
 
     <!-- FILTERS -->
     <aside class="col-span-3 bg-white rounded-xl p-4 text-sm">
       <h3 class="font-semibold mb-3">Activité</h3>
       <ul class="space-y-2">
-        <li><label><input type="checkbox" class="mr-2">Parc de jeux</label></li>
-        <li><label><input type="checkbox" class="mr-2">Activité sportive</label></li>
-        <li><label><input type="checkbox" class="mr-2">Activité culturelle</label></li>
-        <li><label><input type="checkbox" class="mr-2">Nature & animaux</label></li>
+        <li><label><input type="checkbox" class="mr-2"> Parc de jeux</label></li>
+        <li><label><input type="checkbox" class="mr-2"> Activité sportive</label></li>
+        <li><label><input type="checkbox" class="mr-2"> Activité culturelle</label></li>
+        <li><label><input type="checkbox" class="mr-2"> Nature & animaux</label></li>
       </ul>
 
       <hr class="my-4">
 
       <h3 class="font-semibold mb-3">Fourchette de prix</h3>
       <ul class="space-y-2">
-        <li><label><input type="checkbox" class="mr-2">&lt; X €</label></li>
-        <li><label><input type="checkbox" class="mr-2">X – Y €</label></li>
+        <li><label><input type="checkbox" class="mr-2"> &lt; X €</label></li>
+        <li><label><input type="checkbox" class="mr-2"> X – Y €</label></li>
       </ul>
     </aside>
 
     <!-- RESULTS -->
     <section class="col-span-6 space-y-4">
 
-      <!-- RESULT CARD -->
-      <div class="bg-white rounded-xl hover:shadow-md transition flex gap-6 p-4 cursor-pointer">
+      <!-- CARD -->
+      <div class="bg-white rounded-xl hover:shadow-md transition p-4">
 
-        <!-- Image -->
-        <div class="w-32 h-32 bg-gray-200 rounded-lg flex-shrink-0"></div>
+        <div class="flex gap-6">
 
-        <!-- CENTER CONTENT -->
-        <div class="flex flex-col justify-between flex-1">
-          <div>
-            <h4 class="text-lg font-semibold text-gray-900">
-              ClimbingX
-            </h4>
+          <!-- IMAGE -->
+          <div class="w-32 h-32 bg-gray-200 rounded-lg flex-shrink-0"></div>
 
-            <p class="text-sm text-gray-500 mt-1">
-              Adresse · <span class="underline">voir sur la carte</span>
-            </p>
+          <!-- CONTENT -->
+          <div class="flex flex-col justify-between flex-1">
 
-            <p class="text-sm text-gray-700 mt-3">
-              2 words description
-            </p>
+            <div>
+              <h4 class="text-lg font-semibold">ClimbingX</h4>
+
+              <p class="text-sm text-gray-500 mt-1">
+                Adresse · <span class="underline cursor-pointer">voir sur la carte</span>
+              </p>
+
+              <p class="text-sm text-gray-700 mt-3">
+                2 words description
+              </p>
+            </div>
+
+            <div class="flex justify-between items-end mt-4">
+              <span class="text-sm text-gray-500">À partir de</span>
+              <span class="text-lg font-semibold">x €</span>
+            </div>
+
           </div>
 
-          <div class="mt-4 flex justify-between items-end">
-            <span class="text-sm text-gray-500">À partir de</span>
-            <span class="text-lg font-semibold text-gray-900">x €</span>
-          </div>
-        </div>
+          <!-- AVAILABILITY TABLE -->
+          <div class="border-l pl-4 min-w-[220px] text-xs">
 
-        <!-- AGENDA (RIGHT SIDE) -->
-        <div class="border-l pl-4 flex flex-col items-end text-xs text-gray-700 gap-2 min-w-[170px]">
+            <div class="text-[10px] text-gray-400 mb-2 text-right">
+              Disponibilités
+            </div>
 
-          <div class="text-[10px] text-gray-400">
-            Disponibilités
+            <div class="grid grid-cols-5 gap-1 text-center">
+
+              <!-- DAYS -->
+              <div class="font-medium text-gray-500">Mer</div>
+              <div class="font-medium text-gray-500">Jeu</div>
+              <div class="font-medium text-gray-500">Ven</div>
+              <div class="font-medium text-gray-700">Sam</div>
+              <div class="font-medium text-gray-700">Dim</div>
+
+              <!-- TIMES -->
+              <div class="py-1 rounded bg-gray-100">14–17</div>
+              <div class="py-1 rounded bg-gray-100">14–17</div>
+              <div class="py-1 rounded bg-gray-100">14–17</div>
+              <div class="py-1 rounded bg-gray-200 font-medium">10–13</div>
+              <div class="py-1 rounded bg-gray-200 font-medium">14–17</div>
+
+            </div>
           </div>
 
-          <!-- Days -->
-          <div class="flex gap-1 text-gray-500">
-            <span class="w-9 text-center">Mer</span>
-            <span class="w-9 text-center">Jeu</span>
-            <span class="w-9 text-center">Ven</span>
-            <span class="w-9 text-center">Sam</span>
-            <span class="w-9 text-center">Dim</span>
-          </div>
-
-          <!-- Times -->
-          <div class="flex gap-1">
-            <span class="w-9 py-1 rounded bg-gray-100 text-center">14–17</span>
-            <span class="w-9 py-1 rounded bg-gray-100 text-center">14–17</span>
-            <span class="w-9 py-1 rounded bg-gray-100 text-center">14–17</span>
-            <span class="w-9 py-1 rounded bg-gray-200 text-center font-medium">10–13</span>
-            <span class="w-9 py-1 rounded bg-gray-200 text-center font-medium">14–17</span>
-          </div>
         </div>
       </div>
 
