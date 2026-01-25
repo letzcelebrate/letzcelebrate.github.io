@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "ClimbingX",
+    "category": "Activité sportive",
+    "address": "Luxembourg",
+    "description": "Escalade indoor pour enfants",
+    "priceFrom": 25,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 2,
+    "name": "Painting X",
+    "category": "Activité culturelle",
+    "address": "Luxembourg",
+    "description": "Atelier créatif peinture",
+    "priceFrom": 20,
+    "image": "https://via.placeholder.com/150"
+  }
+]
