@@ -1,11 +1,22 @@
 console.log("main.js est bien chargé");
 
+let allPlaces = [];
+
 async function loadPlaces() {
   const response = await fetch("assets/data/places.json");
-  const places = await response.json();
+  allPlaces = await response.json();
+  renderPlaces(allPlaces);
+}
 
+function renderPlaces(places) {
   const resultsContainer = document.getElementById("results");
   resultsContainer.innerHTML = "";
+
+  if (places.length === 0) {
+    resultsContainer.innerHTML =
+      "<p class='text-gray-500'>Aucun résultat</p>";
+    return;
+  }
 
   places.forEach(place => {
     const card = document.createElement("div");
@@ -36,5 +47,42 @@ async function loadPlaces() {
   });
 }
 
-/* 🔑 LIGNE MANQUANTE */
-document.addEventListener("DOMContentLoaded", loadPlaces);
+function applyFilters() {
+  const selectedActivities = Array.from(
+    document.querySelectorAll(".activity-filter:checked")
+  ).map(cb => cb.value);
+
+  const maxBudget = parseInt(
+    document.getElementById("budgetFilter").value,
+    10
+  );
+
+  const filtered = allPlaces.filter(place => {
+    const matchActivity =
+      selectedActivities.length === 0 ||
+      selectedActivities.includes(place.category);
+
+    const matchBudget = place.priceFrom <= maxBudget;
+
+    return matchActivity && matchBudget;
+  });
+
+  renderPlaces(filtered);
+}
+
+/* EVENTS */
+document.addEventListener("DOMContentLoaded", () => {
+  loadPlaces();
+
+  document
+    .querySelectorAll(".activity-filter")
+    .forEach(cb => cb.addEventListener("change", applyFilters));
+
+  const budgetInput = document.getElementById("budgetFilter");
+  const budgetValue = document.getElementById("budgetValue");
+
+  budgetInput.addEventListener("input", () => {
+    budgetValue.textContent = budgetInput.value;
+    applyFilters();
+  });
+});
