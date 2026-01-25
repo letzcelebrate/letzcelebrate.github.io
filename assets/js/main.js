@@ -1,3 +1,5 @@
+console.log("main.js est bien chargé");
+
 async function loadPlaces() {
   const response = await fetch("assets/data/places.json");
   const places = await response.json();
@@ -34,4 +36,5 @@ async function loadPlaces() {
   });
 }
 
+/* 🔑 LIGNE MANQUANTE */
 document.addEventListener("DOMContentLoaded", loadPlaces);
