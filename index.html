@@ -2,13 +2,13 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LetzCelebrate – Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LetzCelebrate – Lieux</title>
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
- 
+
 <body class="bg-gray-50 text-gray-800">
 
 <!-- WORK IN PROGRESS BANNER -->
@@ -29,148 +29,126 @@
 </div>
   
   <!-- HEADER -->
-  <header class="bg-white border-b">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-      <div class="font-bold text-xl">LetzCelebrate.co</div>
+<header class="bg-white border-b">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+    <div class="text-xl font-bold text-teal-600">LetzCelebrate.co</div>
 
-      <nav class="flex gap-6 text-sm">
-        <a href="#" class="hover:text-blue-600">Lieux</a>
-        <a href="#" class="hover:text-blue-600">Idées Cadeaux</a>
-      </nav>
+    <nav class="flex gap-8 text-sm font-medium">
+      <a href="#" class="text-teal-600 border-b-2 border-teal-600 pb-1">Lieux</a>
+      <a href="#" class="hover:text-teal-600">Cadeaux</a>
+    </nav>
 
-      <div class="flex items-center gap-4">
-        <span class="text-sm">FR</span>
-        <div class="w-8 h-8 rounded-full bg-gray-200"></div>
-      </div>
+    <div class="flex items-center gap-4">
+      <span class="text-sm">FR</span>
+      <div class="w-9 h-9 rounded-full bg-yellow-200 flex items-center justify-center">👤</div>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- SEARCH BAR -->
-  <section class="bg-white border-b">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex gap-3 text-sm">
+<!-- SEARCH BAR -->
+<section class="bg-white border-b">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex gap-3 text-sm">
 
-      <!-- LOCATION SEARCH -->
-<div class="flex-1 flex items-center gap-2 border rounded px-3 py-2 bg-white">
-<input
-  id="locationInput"
-  type="text"
-  placeholder="Ville, région…"
-  class="flex-1 outline-none text-sm font-medium text-gray-700"
- />
+    <input class="flex-1 border rounded px-3 py-2" placeholder="Luxembourg" />
+    <input class="flex-1 border rounded px-3 py-2" placeholder="Date" />
+    <input class="flex-1 border rounded px-3 py-2" placeholder="Occasion" />
+    <input class="flex-1 border rounded px-3 py-2" placeholder="Nombre d’invités" />
 
-  <button
-    type="button"
-    onclick="useMyLocation()"
-    class="text-blue-600 text-xs font-semibold hover:underline"
-  >
-    📍 Près de moi
-  </button>
-</div>
+    <button class="bg-yellow-400 hover:bg-yellow-500 px-4 rounded font-semibold">
+      🔍
+    </button>
+  </div>
+</section>
 
-      
-      <div class="flex-1 border rounded px-3 py-2">Activité</div>
-      <div class="flex-1 border rounded px-3 py-2">Date</div>
-      <div class="flex-1 border rounded px-3 py-2">Âge</div>
-      <div class="flex-1 border rounded px-3 py-2">Invités</div>
-      <button class="bg-blue-600 text-white px-4 py-2 rounded">🔍</button>
-    </div>
-  </section>
+<!-- MAIN CONTENT -->
+<main class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-12 gap-6">
 
-  <!-- MAIN -->
-  <main class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-12 gap-6">
-
-    <!-- FILTERS -->
-    <aside class="col-span-3 bg-white rounded-xl p-4 text-sm">
-      <h3 class="font-semibold mb-3">Activité</h3>
-      <ul class="space-y-2">
-        <li><label><input type="checkbox" class="mr-2"> Parc de jeux</label></li>
-        <li><label><input type="checkbox" class="mr-2"> Activité sportive</label></li>
-        <li><label><input type="checkbox" class="mr-2"> Activité culturelle</label></li>
-        <li><label><input type="checkbox" class="mr-2"> Nature & animaux</label></li>
-      </ul>
-
-      <hr class="my-4">
-
-      <h3 class="font-semibold mb-3">Fourchette de prix</h3>
-      <ul class="space-y-2">
-        <li><label><input type="checkbox" class="mr-2"> &lt; X €</label></li>
-        <li><label><input type="checkbox" class="mr-2"> X – Y €</label></li>
-      </ul>
-    </aside>
-
-    <!-- RESULTS -->
-    <section class="col-span-6 space-y-4">
-
-      <!-- CARD -->
-      <div class="bg-white rounded-xl hover:shadow-md transition p-4">
-
-        <div class="flex gap-6">
-
-          <!-- IMAGE -->
-          <div class="w-32 h-32 bg-gray-200 rounded-lg flex-shrink-0"></div>
-
-          <!-- CONTENT -->
-          <div class="flex flex-col justify-between flex-1">
-
-            <div>
-              <h4 class="text-lg font-semibold">ClimbingX</h4>
-
-              <p class="text-sm text-gray-500 mt-1">
-                Adresse · <span class="underline cursor-pointer">voir sur la carte</span>
-              </p>
-
-              <p class="text-sm text-gray-700 mt-3">
-                2 words description
-              </p>
-            </div>
-
-            <div class="flex justify-between items-end mt-4">
-              <span class="text-sm text-gray-500">À partir de</span>
-              <span class="text-lg font-semibold">x €</span>
-            </div>
-
-          </div>
-
-          <!-- AVAILABILITY TABLE -->
-          <div class="border-l pl-4 min-w-[220px] text-xs">
-
-            <div class="text-[10px] text-gray-400 mb-2 text-right">
-              Disponibilités
-            </div>
-
-            <div class="grid grid-cols-5 gap-1 text-center">
-
-              <!-- DAYS -->
-              <div class="font-medium text-gray-500">Mer</div>
-              <div class="font-medium text-gray-500">Jeu</div>
-              <div class="font-medium text-gray-500">Ven</div>
-              <div class="font-medium text-gray-700">Sam</div>
-              <div class="font-medium text-gray-700">Dim</div>
-
-              <!-- TIMES -->
-              <div class="py-1 rounded bg-gray-100">100€</div>
-              <div class="py-1 rounded bg-gray-100">100€</div>
-              <div class="py-1 rounded bg-gray-100">100€</div>
-              <div class="py-1 rounded bg-gray-200 font-medium">150€</div>
-              <div class="py-1 rounded bg-gray-200 font-medium">150€</div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </section>
+  <!-- LEFT COLUMN : MAP + FILTERS -->
+  <aside class="col-span-3 space-y-6">
 
     <!-- MAP -->
-    <aside class="col-span-3 bg-white rounded-xl p-4">
-      <div class="w-full h-96 bg-gray-200 rounded flex items-center justify-center text-sm text-gray-500">
-        Map placeholder
+    <div class="bg-white rounded-xl p-3">
+      <div class="w-full h-48 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">
+        Carte (à connecter plus tard)
       </div>
-    </aside>
+    </div>
 
-  </main>
-<script src="assets/js/main.js"></script>
+    <!-- FILTERS -->
+    <div class="bg-white rounded-xl p-4 text-sm space-y-6">
+
+      <div>
+        <h3 class="font-semibold mb-2">Activité</h3>
+        <ul class="space-y-1">
+          <li><label><input type="checkbox" class="mr-2"> Parc de jeux</label></li>
+          <li><label><input type="checkbox" class="mr-2"> Activité sportive</label></li>
+          <li><label><input type="checkbox" class="mr-2"> Activité culturelle</label></li>
+          <li><label><input type="checkbox" class="mr-2"> Nature & animaux</label></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">Budget</h3>
+        <input type="range" min="40" max="300" class="w-full">
+        <div class="text-xs text-gray-500 mt-1">De 40 € à 300 €+</div>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">Services</h3>
+        <ul class="space-y-1">
+          <li><label><input type="checkbox" class="mr-2"> Gâteau inclus</label></li>
+          <li><label><input type="checkbox" class="mr-2"> Sac surprise</label></li>
+        </ul>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- RIGHT COLUMN : RESULTS -->
+  <section class="col-span-9 space-y-4">
+
+    <!-- RESULT CARD -->
+    <div class="bg-white border rounded-xl p-4 flex gap-4">
+      <div class="w-28 h-28 bg-gray-200 rounded"></div>
+
+      <div class="flex-1">
+        <h4 class="font-semibold text-lg">ClimbingX</h4>
+        <p class="text-sm text-gray-500">
+          Adresse · <span class="underline cursor-pointer">voir sur la carte</span>
+        </p>
+        <p class="text-sm text-gray-700 mt-2 italic">
+          Short description
+        </p>
+      </div>
+
+      <div class="text-sm text-right flex flex-col justify-end">
+        <span class="text-gray-500">Prix à partir de</span>
+        <span class="font-semibold text-lg">x €</span>
+      </div>
+    </div>
+
+    <!-- RESULT CARD -->
+    <div class="bg-white border rounded-xl p-4 flex gap-4">
+      <div class="w-28 h-28 bg-gray-200 rounded"></div>
+
+      <div class="flex-1">
+        <h4 class="font-semibold text-lg">Painting X</h4>
+        <p class="text-sm text-gray-500">
+          Adresse · <span class="underline cursor-pointer">voir sur la carte</span>
+        </p>
+        <p class="text-sm text-gray-700 mt-2 italic">
+          Short description
+        </p>
+      </div>
+
+      <div class="text-sm text-right flex flex-col justify-end">
+        <span class="text-gray-500">Prix à partir de</span>
+        <span class="font-semibold text-lg">x €</span>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
 </body>
 </html>
-
