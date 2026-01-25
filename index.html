@@ -78,17 +78,49 @@
 
       <div>
         <h3 class="font-semibold mb-2">Activité</h3>
-        <ul class="space-y-1">
-          <li><label><input type="checkbox" class="mr-2"> Parc de jeux</label></li>
-          <li><label><input type="checkbox" class="mr-2"> Activité sportive</label></li>
-          <li><label><input type="checkbox" class="mr-2"> Activité culturelle</label></li>
-          <li><label><input type="checkbox" class="mr-2"> Nature & animaux</label></li>
-        </ul>
+       <ul class="space-y-1">
+  <li>
+    <label>
+      <input type="checkbox" class="mr-2 activity-filter" value="Parc de jeux">
+      Parc de jeux
+    </label>
+  </li>
+  <li>
+    <label>
+      <input type="checkbox" class="mr-2 activity-filter" value="Activité sportive">
+      Activité sportive
+    </label>
+  </li>
+  <li>
+    <label>
+      <input type="checkbox" class="mr-2 activity-filter" value="Activité culturelle">
+      Activité culturelle
+    </label>
+  </li>
+  <li>
+    <label>
+      <input type="checkbox" class="mr-2 activity-filter" value="Nature & animaux">
+      Nature & animaux
+    </label>
+  </li>
+</ul>
+
       </div>
 
       <div>
         <h3 class="font-semibold mb-2">Budget</h3>
-        <input type="range" min="40" max="300" class="w-full">
+       <input
+  type="range"
+  min="40"
+  max="300"
+  value="300"
+  class="w-full"
+  id="budgetFilter"
+/>
+<p class="text-xs text-gray-500 mt-1">
+  Budget max : <span id="budgetValue">300</span> €
+</p>
+
         <div class="text-xs text-gray-500 mt-1">De 40 € à 300 €+</div>
       </div>
 
