@@ -1,34 +1,37 @@
-function useMyLocation() {
-  if (!navigator.geolocation) {
-    alert("La géolocalisation n'est pas supportée par votre navigateur.");
-    return;
-  }
+async function loadPlaces() {
+  const response = await fetch("assets/data/places.json");
+  const places = await response.json();
 
-  navigator.geolocation.getCurrentPosition(
-    async (position) => {
-      const lat = position.coords.latitude;
-      const lon = position.coords.longitude;
+  const resultsContainer = document.getElementById("results");
+  resultsContainer.innerHTML = "";
 
-      try {
-        const response = await fetch(
-          `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`
-        );
-        const data = await response.json();
+  places.forEach(place => {
+    const card = document.createElement("div");
+    card.className = "bg-white border rounded-xl p-4 flex gap-4";
 
-        const city =
-          data.address.city ||
-          data.address.town ||
-          data.address.village ||
-          data.address.county ||
-          "Votre position";
+    card.innerHTML = `
+      <div class="w-28 h-28 bg-gray-200 rounded overflow-hidden">
+        <img src="${place.image}" alt="${place.name}" class="w-full h-full object-cover">
+      </div>
 
-        document.getElementById("locationInput").value = city;
-      } catch (e) {
-        document.getElementById("locationInput").value = "Près de moi";
-      }
-    },
-    () => {
-      alert("Impossible d'accéder à votre position.");
-    }
-  );
+      <div class="flex-1">
+        <h4 class="font-semibold text-lg">${place.name}</h4>
+        <p class="text-sm text-gray-500">
+          ${place.address} · <span class="underline cursor-pointer">voir sur la carte</span>
+        </p>
+        <p class="text-sm text-gray-700 mt-2 italic">
+          ${place.description}
+        </p>
+      </div>
+
+      <div class="text-sm text-right flex flex-col justify-end">
+        <span class="text-gray-500">Prix à partir de</span>
+        <span class="font-semibold text-lg">${place.priceFrom} €</span>
+      </div>
+    `;
+
+    resultsContainer.appendChild(card);
+  });
 }
+
+document.addEventListener("DOMContentLoaded", loadPlaces);
