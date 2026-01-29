@@ -3,18 +3,85 @@
     "id": 1,
     "name": "ClimbingX",
     "category": "Activité sportive",
+    "activityType": "Escalade",
+    "description": "Centre d'escalade moderne avec des parcours adaptés à tous les âges",
+    "city": "Luxembourg",
     "address": "Luxembourg",
-    "description": "Escalade indoor pour enfants",
-    "priceFrom": 25,
-    "image": "https://via.placeholder.com/150"
+    "image": "https://via.placeholder.com/150?text=ClimbingX",
+    "priceFrom": 45
   },
   {
     "id": 2,
     "name": "Painting X",
-    "category": "Activité culturelle",
+    "category": "Atelier créatif",
+    "activityType": "Peinture/Dessin",
+    "description": "Pour vos anniversaires, partagez un moment créatif et mémorable avec notre atelier de peinture sur céramique. Créez votre propre vaisselle et vivez une expérience artistique unique.",
+    "city": "Esch-Sur-Alzette",
+    "address": "Esch-Sur-Alzette",
+    "image": "https://via.placeholder.com/150?text=Painting+X",
+    "priceFrom": 40
+  },
+  {
+    "id": 3,
+    "name": "KoJump",
+    "category": "Activité sportive",
+    "activityType": "Trampoline",
+    "description": "Parc de trampolines pour sauter, jouer et s'amuser en toute sécurité",
+    "city": "Luxembourg",
     "address": "Luxembourg",
-    "description": "Atelier créatif peinture",
-    "priceFrom": 20,
-    "image": "https://via.placeholder.com/150"
-  }
-]
+    "image": "https://via.placeholder.com/150?text=KoJump",
+    "priceFrom": 55
+  },
+  {
+    "id": 4,
+    "name": "Blocx",
+    "category": "Activité sportive",
+    "activityType": "Escalade",
+    "description": "Salle d'escalade de bloc avec différents niveaux de difficulté",
+    "city": "Luxembourg",
+    "address": "Luxembourg",
+    "image": "https://via.placeholder.com/150?text=Blocx",
+    "priceFrom": 50
+  },
+  {
+    "id": 5,
+    "name": "Les Thermes",
+    "category": "Activité sportive",
+    "activityType": "Centre aquatique",
+    "description": "Centre aquatique avec piscines et toboggans pour toute la famille",
+    "city": "Luxembourg",
+    "address": "Luxembourg",
+    "image": "https://via.placeholder.com/150?text=Les+Thermes",
+    "priceFrom": 60
+  },
+  {
+    "id": 6,
+    "name": "La Coque",
+    "category": "Activité sportive",
+    "activityType": "Centre aquatique",
+    "description": "Complexe sportif avec piscine olympique et espaces ludiques",
+    "city": "Luxembourg",
+    "address": "Luxembourg",
+    "image": "https://via.placeholder.com/150?text=La+Coque",
+    "priceFrom": 65
+  },
+  {
+    "id": 7,
+    "name": "Youth Hostels",
+    "category": "Activité sportive",
+    "activityType": "Escalade",
+    "description": "Auberge de jeunesse avec mur d'escalade et activités de groupe",
+    "city": "Luxembourg",
+    "address": "Luxembourg",
+    "image": "https://via.placeholder.com/150?text=Youth+Hostels",
+    "priceFrom": 48
+  },
+  {
+    "id": 8,
+    "name": "Crocus",
+    "category": "Parc de jeux",
+    "activityType": "Escape Game",
+    "description": "Escape game immersif avec différents scénarios pour tous les âges",
+    "city": "Luxembourg",
+    "address": "Luxembourg",
+    "image": "https://via.placeholder
